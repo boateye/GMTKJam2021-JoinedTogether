@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1998742474818888000}
   - component: {fileID: 6831278893816696231}
   - component: {fileID: -5591289199665265875}
+  - component: {fileID: 8863877370616191246}
   m_Layer: 0
   m_Name: Cone
   m_TagString: Untagged
@@ -476,7 +477,7 @@ MeshCollider:
   m_GameObject: {fileID: 8518472372223278965}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -497,3 +498,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8863877370616191246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518472372223278965}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5743542, y: 0.5162316, z: 0.5423677}
+  m_Center: {x: -0.28717613, y: 0.25811574, z: -0.31313705}
