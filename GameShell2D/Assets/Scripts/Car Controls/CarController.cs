@@ -17,13 +17,14 @@ public class CarController : MonoBehaviour
 
     //private float speedInput, turnInput;
 
-    private float forwardGas, backwardGas, turnInput;
+    private float forwardGas, brake, turnInput, speedInput;
 
     public LayerMask whatIsGround;
     //public float groundRayLength = 0.5f;
     public Transform groundRayPoint;
 
     private bool grounded;
+    private Vector3 velocity, localVelocity;
 
 
     private void Awake()
@@ -69,20 +70,28 @@ public class CarController : MonoBehaviour
         print("cancelled");
     }
 
+    public Vector3 com = new Vector3(0,0,0);
+
     // Start is called before the first frame update
     void Start()
     {
         theRB.transform.parent = null;
+        theRB.centerOfMass = com;
     }
 
     // Update is called once per frame
     void Update()
     {
+        theRB.centerOfMass = com;
+
         transform.position = theRB.transform.position;
         //print("left Stick" +  leftStick);
         turnInput = leftStick.x;
         forwardGas = rightTrigger;
-        backwardGas = leftTrigger;
+        brake = leftTrigger;
+
+        velocity = theRB.velocity;
+        localVelocity = transform.InverseTransformDirection(velocity);
 
         //print("right trigger " + rightTrigger);
         //print("left trigger " + leftTrigger);
@@ -102,12 +111,27 @@ public class CarController : MonoBehaviour
 
         transform.position = theRB.transform.position;*/
 
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * forwardGas * Time.deltaTime, 0f));
-        transform.position = theRB.transform.position;
+        speedInput = forwardGas - brake;
+
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * speedInput * Time.deltaTime, 0f));
+        //transform.position = theRB.transform.position;
     }
 
     private void FixedUpdate()
     {
+        //print("rigidbody.velocity.magnitude " + theRB.velocity.x);
+
+
+        /*
+        if(localVelocity.z > 0.1f)
+        {
+            print("forward");
+        }else
+        {
+            print("backward");
+        }
+        */
+
         //print("Grounded: " + grounded + "   number: " + forwardGas * forwardAccel * 1000f);
         grounded = false;
         RaycastHit hit;
@@ -119,24 +143,8 @@ public class CarController : MonoBehaviour
 
         if (grounded)
         {
-            theRB.AddForce(transform.forward * forwardGas * forwardAccel * 1000f);
+            //theRB.AddForce(transform.forward * forwardGas * forwardAccel * 1000f);
+            theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
         }
-        //print(leftStick);
-        /*
-        if(Mathf.Abs(speedInput) > 0)
-        {
-            theRB.AddForce(transform.forward * speedInput);
-        }
-        //theRB.AddForce(transform.forward * forwardAccel * 1000f);
-        */
-
-        //theRB.AddForce(transform.forward *  forwardAccel * 1000f);
-
-        
-
     }
-
-
-
-
 }
