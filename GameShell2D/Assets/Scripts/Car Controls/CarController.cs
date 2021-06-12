@@ -108,6 +108,7 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //print("Grounded: " + grounded + "   number: " + forwardGas * forwardAccel * 1000f);
         grounded = false;
         RaycastHit hit;
 
@@ -128,6 +129,8 @@ public class CarController : MonoBehaviour
         }
         //theRB.AddForce(transform.forward * forwardAccel * 1000f);
         */
+
+        //theRB.AddForce(transform.forward *  forwardAccel * 1000f);
 
         
 
