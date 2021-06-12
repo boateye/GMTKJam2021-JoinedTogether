@@ -212,7 +212,7 @@ Transform:
   m_LocalScale: {x: 12.564919, y: 0.36915, z: 5.3140793}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.587002}
 --- !u!1 &314470530
 GameObject:
@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 314470532}
   - component: {fileID: 314470531}
   - component: {fileID: 314470535}
+  - component: {fileID: 314470536}
   m_Layer: 0
   m_Name: car
   m_TagString: Untagged
@@ -301,13 +302,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314470530}
-  m_LocalRotation: {x: -0, y: 0.71852505, z: -0, w: 0.6955011}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8727388, y: 0.31225517, z: 2.0609047}
-  m_Children: []
-  m_Father: {fileID: 476254992}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 91.866005, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.62, y: 0, z: 4.1}
+  m_LocalScale: {x: 2.3397362, y: 0.4010916, z: 4.93225}
+  m_Children:
+  - {fileID: 386748401}
+  - {fileID: 526061440}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &314470535
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -321,9 +324,31 @@ Rigidbody:
   m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &314470536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314470530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d246733ddfab24e9110b9e2b51bef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theRB: {fileID: 314470535}
+  forwardAccel: 8
+  reverseAccel: 4
+  maxSpeed: 50
+  turnStrength: 180
+  groundRayLength: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  groundRayPoint: {fileID: 526061440}
 --- !u!1 &386748398
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,69 +425,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386748398}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06, y: 7.92, z: -15.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.21369931, y: 13.98683, z: -3.1648843}
+  m_LocalScale: {x: 0.42739862, y: 2.493196, z: 0.20274723}
   m_Children: []
-  m_Father: {fileID: 476254992}
-  m_RootOrder: 1
+  m_Father: {fileID: 314470534}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &476254991
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 476254992}
-  - component: {fileID: 476254993}
-  m_Layer: 0
-  m_Name: Car Holder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &476254992
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476254991}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.62, y: 0, z: 4.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 526061440}
-  - {fileID: 386748401}
-  - {fileID: 314470534}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &476254993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476254991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d246733ddfab24e9110b9e2b51bef6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theRB: {fileID: 314470535}
-  forwardAccel: 8
-  reverseAccel: 4
-  maxSpeed: 50
-  turnStrength: 180
-  groundRayLength: 0.5
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundRayPoint: {fileID: 526061440}
 --- !u!1 &526061439
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,12 +455,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526061439}
-  m_LocalRotation: {x: -0, y: 0.71852505, z: -0, w: 0.6955011}
-  m_LocalPosition: {x: -10, y: 0.19246, z: 0.21}
-  m_LocalScale: {x: 0.35016, y: 0.35016, z: 0.35016}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.38, z: -0.443}
+  m_LocalScale: {x: 0.42739862, y: 2.493196, z: 0.20274723}
   m_Children: []
-  m_Father: {fileID: 476254992}
-  m_RootOrder: 0
+  m_Father: {fileID: 314470534}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272361908
 GameObject:
