@@ -10,7 +10,7 @@
                     "type": "Value",
                     "id": "24461032-f9c5-45b0-9256-0fcbebe8b553",
                     "expectedControlType": "Axis",
-                    "processors": "",
+                    "processors": "AxisDeadzone",
                     "interactions": ""
                 },
                 {
@@ -41,6 +41,22 @@
                     "name": "BButton",
                     "type": "Button",
                     "id": "5dc52442-f293-41da-bca7-da2236f59a5d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightTrigger",
+                    "type": "Button",
+                    "id": "505ba455-e621-444a-94a2-445da1c6e40f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "LeftTrigger",
+                    "type": "Button",
+                    "id": "de1add05-5092-41fe-bd44-e1f4be6ef8a8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -99,6 +115,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "BButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96750a1a-154b-4c8b-a05a-b82c5a257c6f",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightTrigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "71644956-f583-4139-a618-19f794794a54",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftTrigger",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

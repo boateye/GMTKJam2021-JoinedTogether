@@ -23,7 +23,7 @@ public class @InputController : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""24461032-f9c5-45b0-9256-0fcbebe8b553"",
                     ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone"",
                     ""interactions"": """"
                 },
                 {
@@ -54,6 +54,22 @@ public class @InputController : IInputActionCollection, IDisposable
                     ""name"": ""BButton"",
                     ""type"": ""Button"",
                     ""id"": ""5dc52442-f293-41da-bca7-da2236f59a5d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""RightTrigger"",
+                    ""type"": ""Button"",
+                    ""id"": ""505ba455-e621-444a-94a2-445da1c6e40f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""LeftTrigger"",
+                    ""type"": ""Button"",
+                    ""id"": ""de1add05-5092-41fe-bd44-e1f4be6ef8a8"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -114,6 +130,28 @@ public class @InputController : IInputActionCollection, IDisposable
                     ""action"": ""BButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96750a1a-154b-4c8b-a05a-b82c5a257c6f"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightTrigger"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""71644956-f583-4139-a618-19f794794a54"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftTrigger"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -127,6 +165,8 @@ public class @InputController : IInputActionCollection, IDisposable
         m_Gameplay_Why = m_Gameplay.FindAction("Why", throwIfNotFound: true);
         m_Gameplay_AButton = m_Gameplay.FindAction("AButton", throwIfNotFound: true);
         m_Gameplay_BButton = m_Gameplay.FindAction("BButton", throwIfNotFound: true);
+        m_Gameplay_RightTrigger = m_Gameplay.FindAction("RightTrigger", throwIfNotFound: true);
+        m_Gameplay_LeftTrigger = m_Gameplay.FindAction("LeftTrigger", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -181,6 +221,8 @@ public class @InputController : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Why;
     private readonly InputAction m_Gameplay_AButton;
     private readonly InputAction m_Gameplay_BButton;
+    private readonly InputAction m_Gameplay_RightTrigger;
+    private readonly InputAction m_Gameplay_LeftTrigger;
     public struct GameplayActions
     {
         private @InputController m_Wrapper;
@@ -190,6 +232,8 @@ public class @InputController : IInputActionCollection, IDisposable
         public InputAction @Why => m_Wrapper.m_Gameplay_Why;
         public InputAction @AButton => m_Wrapper.m_Gameplay_AButton;
         public InputAction @BButton => m_Wrapper.m_Gameplay_BButton;
+        public InputAction @RightTrigger => m_Wrapper.m_Gameplay_RightTrigger;
+        public InputAction @LeftTrigger => m_Wrapper.m_Gameplay_LeftTrigger;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -214,6 +258,12 @@ public class @InputController : IInputActionCollection, IDisposable
                 @BButton.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBButton;
                 @BButton.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBButton;
                 @BButton.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBButton;
+                @RightTrigger.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightTrigger;
+                @RightTrigger.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightTrigger;
+                @RightTrigger.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightTrigger;
+                @LeftTrigger.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLeftTrigger;
+                @LeftTrigger.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLeftTrigger;
+                @LeftTrigger.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLeftTrigger;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -233,6 +283,12 @@ public class @InputController : IInputActionCollection, IDisposable
                 @BButton.started += instance.OnBButton;
                 @BButton.performed += instance.OnBButton;
                 @BButton.canceled += instance.OnBButton;
+                @RightTrigger.started += instance.OnRightTrigger;
+                @RightTrigger.performed += instance.OnRightTrigger;
+                @RightTrigger.canceled += instance.OnRightTrigger;
+                @LeftTrigger.started += instance.OnLeftTrigger;
+                @LeftTrigger.performed += instance.OnLeftTrigger;
+                @LeftTrigger.canceled += instance.OnLeftTrigger;
             }
         }
     }
@@ -244,5 +300,7 @@ public class @InputController : IInputActionCollection, IDisposable
         void OnWhy(InputAction.CallbackContext context);
         void OnAButton(InputAction.CallbackContext context);
         void OnBButton(InputAction.CallbackContext context);
+        void OnRightTrigger(InputAction.CallbackContext context);
+        void OnLeftTrigger(InputAction.CallbackContext context);
     }
 }
