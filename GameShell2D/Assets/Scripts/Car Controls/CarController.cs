@@ -121,7 +121,9 @@ public class CarController : MonoBehaviour
         if(grounded && theRB.velocity.magnitude > 1f)
         {
             //print("moving");
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime, 0f));
+            //if(speedInput > 0.15f) transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime, 0f));
+            //if(speedInput < -0.15f) transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, -turnInput * turnStrength * Time.deltaTime, 0f));
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, speedInput * turnInput * turnStrength * Time.deltaTime, 0f));
         }
 
         //transform.position = theRB.transform.position;
@@ -176,7 +178,7 @@ public class CarController : MonoBehaviour
         {
             theRB.drag = drag;
             //theRB.AddForce(transform.forward * forwardGas * forwardAccel * 1000f);
-            if (speedInput > 0) theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
+            if(speedInput > 0) theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
             if(speedInput <= 0) theRB.AddForce(transform.forward * speedInput * reverseAccel * 1000f);
             theRB.AddForce(-Vector3.up * downforce);
         }

@@ -209,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 149135470}
   m_LocalRotation: {x: -0, y: -0, z: 0.21292259, w: 0.9770691}
   m_LocalPosition: {x: -3.07, y: -0.11, z: 0}
-  m_LocalScale: {x: 12.564919, y: 0.36915, z: 5.3140793}
+  m_LocalScale: {x: 12.564919, y: 0.36915, z: 26.63}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -344,7 +344,7 @@ MonoBehaviour:
   maxSpeed: 50
   turnStrength: 180
   groundRayLength: 0.5
-  downforce: 100
+  downforce: 10
   gravityForce: 10
   drag: 3
   whatIsGround:
@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 386748401}
   - component: {fileID: 386748400}
   - component: {fileID: 386748399}
+  - component: {fileID: 386748402}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -431,12 +432,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386748398}
   m_LocalRotation: {x: 0.5965903, y: -0, z: -0, w: 0.80254596}
-  m_LocalPosition: {x: 0, y: 81.38, z: -32.9}
+  m_LocalPosition: {x: 21.51, y: 80, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 73.25201, y: 0, z: 0}
+--- !u!114 &386748402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386748398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee5f94e3ec3a5c43831f267b29d1b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 314470530}
+  offset: {x: 0, y: 80, z: -30}
+  trackSpeed: 1
 --- !u!1 &526061439
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800995393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.34, y: 4.99, z: -0.95}
+  m_LocalPosition: {x: -9.34, y: 4.99, z: -23.14}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -916,9 +932,9 @@ SpringJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800995393}
   m_ConnectedBody: {fileID: 314470535}
-  m_Anchor: {x: 0, y: -0.5, z: 0.61}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.1196715, y: -0.6232996, z: -0.5291702}
+  m_Anchor: {x: 0, y: -0.04, z: 0.52}
+  m_AutoConfigureConnectedAnchor: 0
+  m_ConnectedAnchor: {x: 0, y: 0.45, z: -0.48}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 0.2
