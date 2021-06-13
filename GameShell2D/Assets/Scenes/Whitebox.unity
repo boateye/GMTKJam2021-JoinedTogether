@@ -340,16 +340,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theRB: {fileID: 314470535}
   forwardAccel: 4
-  reverseAccel: 4
+  reverseAccel: 2
   maxSpeed: 50
   turnStrength: 180
   groundRayLength: 0.5
   downforce: 100
+  gravityForce: 10
+  drag: 3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   groundRayPoint: {fileID: 526061440}
-  rollLimit: 15
   com: {x: 0, y: -1, z: 0}
   zAngleLimit: 30
   xAngleLimit: 60
@@ -430,7 +431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386748398}
   m_LocalRotation: {x: 0.5965903, y: -0, z: -0, w: 0.80254596}
-  m_LocalPosition: {x: 0, y: 74.18, z: -31.6}
+  m_LocalPosition: {x: 0, y: 81.38, z: -32.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -483,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &947608324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1800995394
 BoxCollider:
   m_ObjectHideFlags: 0
