@@ -2,12 +2,16 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CarController
+    - FollowCam
     - GlassModelShifter
     - ModelShifter
+    - ShowLine
+    - VaultMovement
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -86,6 +90,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
       Script: {instanceID: 12234}
     - Class: 114
       Script: {instanceID: 12790}
@@ -96,10 +102,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14274}
     - Class: 114
+      Script: {instanceID: 14950}
+    - Class: 114
       Script: {instanceID: 15194}
     - Class: 114
       Script: {instanceID: 15226}
+    - Class: 114
+      Script: {instanceID: 15416}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
