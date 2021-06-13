@@ -218,6 +218,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundRayPoint: {fileID: 2935244342197277972}
+  com: {x: 0, y: 0, z: 0}
 --- !u!1 &2935244342197278187
 GameObject:
   m_ObjectHideFlags: 0
