@@ -98,10 +98,6 @@ public class CarController : MonoBehaviour
         velocity = theRB.velocity;
         localVelocity = transform.InverseTransformDirection(velocity);
 
-        //print("right trigger " + rightTrigger);
-        //print("left trigger " + leftTrigger);
-
-        print("turnInput " + turnInput);
 
 
         /*
