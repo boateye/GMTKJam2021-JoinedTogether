@@ -8,8 +8,8 @@ public class ModelShifter : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        CarController player = collision.gameObject.GetComponent<CarController>();
-        if (player != null)
+        SpringJoint vault = collision.gameObject.GetComponent<SpringJoint>();
+        if (vault != null)
         {
             //Swaps current object with the "destroyed" version
             Instantiate(destroyedVersion, transform.position, transform.rotation);
