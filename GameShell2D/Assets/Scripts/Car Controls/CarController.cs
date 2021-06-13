@@ -101,7 +101,7 @@ public class CarController : MonoBehaviour
         //print("right trigger " + rightTrigger);
         //print("left trigger " + leftTrigger);
 
-        //print("turnInput " + turnInput);
+        print("turnInput " + turnInput);
 
 
         /*
