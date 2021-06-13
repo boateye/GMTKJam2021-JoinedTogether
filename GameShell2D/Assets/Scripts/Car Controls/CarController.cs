@@ -14,6 +14,7 @@ public class CarController : MonoBehaviour
     public Rigidbody theRB;
 
     public float forwardAccel = 8f, reverseAccel = 4f, maxSpeed = 50f, turnStrength = 180f, groundRayLength = 0.5f;
+    public float downforce = 100f;
 
     //private float speedInput, turnInput;
 
@@ -25,6 +26,8 @@ public class CarController : MonoBehaviour
 
     private bool grounded;
     private Vector3 velocity, localVelocity;
+
+    public float rollLimit = 15f;
 
 
     private void Awake()
@@ -115,13 +118,30 @@ public class CarController : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * speedInput * Time.deltaTime, 0f));
         //transform.position = theRB.transform.position;
+
+        //print("transform.rotation.z " + transform.rotation.eulerAngles.z);
+        //transform.rotation= Quaternion.Euler(new Vector3(theAngle,0f,0f));
+        print(transform.rotation.eulerAngles.z + " " + zAngleLimit);
+
+        float x = transform.rotation.eulerAngles.x;
+        float y = transform.rotation.eulerAngles.y;
+        float z = transform.rotation.eulerAngles.z;
+
+        if (z > zAngleLimit && z < 181) transform.rotation = Quaternion.Euler(new Vector3(x, y, zAngleLimit));
+        if (z < 360 - zAngleLimit && z > 271) transform.rotation = Quaternion.Euler(new Vector3(x, y, -zAngleLimit));
+        //if (transform.rotation.eulerAngles.x > xAngleLimit) transform.rotation = Quaternion.Euler(new Vector3(xAngleLimit, y, z));
+        //if (transform.rotation.eulerAngles.x < -xAngleLimit) transform.rotation = Quaternion.Euler(new Vector3(-xAngleLimit, y, z));
+        
     }
+
+    public float zAngleLimit = 30f;
+    public float xAngleLimit = 60f;
 
     private void FixedUpdate()
     {
+
         //print("rigidbody.velocity.magnitude " + theRB.velocity.x);
-
-
+        
         /*
         if(localVelocity.z > 0.1f)
         {
@@ -133,6 +153,7 @@ public class CarController : MonoBehaviour
         */
 
         //print("Grounded: " + grounded + "   number: " + forwardGas * forwardAccel * 1000f);
+
         grounded = false;
         RaycastHit hit;
 
@@ -145,6 +166,7 @@ public class CarController : MonoBehaviour
         {
             //theRB.AddForce(transform.forward * forwardGas * forwardAccel * 1000f);
             theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
+            theRB.AddForce(-Vector3.up * downforce);
         }
     }
 }
