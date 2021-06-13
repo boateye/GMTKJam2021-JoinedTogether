@@ -14,7 +14,8 @@ public class CarController : MonoBehaviour
     public Rigidbody theRB;
 
     public float forwardAccel = 8f, reverseAccel = 4f, maxSpeed = 50f, turnStrength = 180f, groundRayLength = 0.5f;
-    public float downforce = 100f;
+    public float downforce = 100f, gravityForce = 10f;
+    public float drag = 3f;
 
     //private float speedInput, turnInput;
 
@@ -27,7 +28,7 @@ public class CarController : MonoBehaviour
     private bool grounded;
     private Vector3 velocity, localVelocity;
 
-    public float rollLimit = 15f;
+    //public float rollLimit = 15f;
 
 
     private void Awake()
@@ -80,6 +81,7 @@ public class CarController : MonoBehaviour
     {
         theRB.transform.parent = null;
         theRB.centerOfMass = com;
+        theRB.drag = drag;
     }
 
     // Update is called once per frame
@@ -112,16 +114,21 @@ public class CarController : MonoBehaviour
             speedInput = Input.GetAxis("Vertical") * forwardAccel * 1000f;
         }
 
-        transform.position = theRB.transform.position;*/
+        transform.position = theRB.transform.position;
+        */
 
         speedInput = forwardGas - brake;
+        if(grounded && theRB.velocity.magnitude > 1f)
+        {
+            //print("moving");
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime, 0f));
+        }
 
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * speedInput * Time.deltaTime, 0f));
         //transform.position = theRB.transform.position;
 
         //print("transform.rotation.z " + transform.rotation.eulerAngles.z);
         //transform.rotation= Quaternion.Euler(new Vector3(theAngle,0f,0f));
-        print(transform.rotation.eulerAngles.z + " " + zAngleLimit);
+        //print(transform.rotation.eulerAngles.z + " " + zAngleLimit);
 
         float x = transform.rotation.eulerAngles.x;
         float y = transform.rotation.eulerAngles.y;
@@ -129,9 +136,11 @@ public class CarController : MonoBehaviour
 
         if (z > zAngleLimit && z < 181) transform.rotation = Quaternion.Euler(new Vector3(x, y, zAngleLimit));
         if (z < 360 - zAngleLimit && z > 271) transform.rotation = Quaternion.Euler(new Vector3(x, y, -zAngleLimit));
+
+        //this limits front flips and backflips but it might not be necessary, since being upsidedown would automatically flip the vehicle back upward so it doesn't matter
+        //DOES NOT WORK YET
         //if (transform.rotation.eulerAngles.x > xAngleLimit) transform.rotation = Quaternion.Euler(new Vector3(xAngleLimit, y, z));
         //if (transform.rotation.eulerAngles.x < -xAngleLimit) transform.rotation = Quaternion.Euler(new Vector3(-xAngleLimit, y, z));
-        
     }
 
     public float zAngleLimit = 30f;
@@ -155,6 +164,7 @@ public class CarController : MonoBehaviour
         //print("Grounded: " + grounded + "   number: " + forwardGas * forwardAccel * 1000f);
 
         grounded = false;
+        
         RaycastHit hit;
 
         if(Physics.Raycast(groundRayPoint.position, -transform.up, out hit, groundRayLength, whatIsGround))
@@ -164,9 +174,16 @@ public class CarController : MonoBehaviour
 
         if (grounded)
         {
+            theRB.drag = drag;
             //theRB.AddForce(transform.forward * forwardGas * forwardAccel * 1000f);
-            theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
+            if (speedInput > 0) theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
+            if(speedInput <= 0) theRB.AddForce(transform.forward * speedInput * reverseAccel * 1000f);
             theRB.AddForce(-Vector3.up * downforce);
+        }
+        else
+        {
+            theRB.drag = 0.1f;
+            theRB.AddForce(Vector3.up * -gravityForce * 100f);
         }
     }
 }
