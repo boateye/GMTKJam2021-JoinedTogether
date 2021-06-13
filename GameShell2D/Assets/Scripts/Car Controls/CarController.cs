@@ -15,7 +15,8 @@ public class CarController : MonoBehaviour
 
     public float forwardAccel = 8f, reverseAccel = 4f, maxSpeed = 50f, turnStrength = 180f, groundRayLength = 0.5f;
     public float downforce = 100f, gravityForce = 10f;
-    public float drag = 3f;
+    public float drag = 3f,releaseDrag = 0f;
+    private float calculatedDrag, forward;
 
     //private float speedInput, turnInput;
 
@@ -90,7 +91,6 @@ public class CarController : MonoBehaviour
         theRB.centerOfMass = com;
 
         transform.position = theRB.transform.position;
-        //print("left Stick" +  leftStick);
         turnInput = leftStick.x;
         forwardGas = rightTrigger;
         brake = leftTrigger;
@@ -143,6 +143,21 @@ public class CarController : MonoBehaviour
         //DOES NOT WORK YET
         //if (transform.rotation.eulerAngles.x > xAngleLimit) transform.rotation = Quaternion.Euler(new Vector3(xAngleLimit, y, z));
         //if (transform.rotation.eulerAngles.x < -xAngleLimit) transform.rotation = Quaternion.Euler(new Vector3(-xAngleLimit, y, z));
+
+        //calculate correct dampen
+        //high dampen when slow, lower when going faster
+
+        //print("velocity: " + theRB.velocity.magnitude);
+
+        //0-27
+
+        //calculatedDrag = (3 * drag) - (2 * drag * (theRB.velocity.magnitude/28f));
+        //print("calculatedDrag: " + calculatedDrag);
+
+        //forward = transform.forward * speedInput * forwardAccel * 1000f;
+        //print(1 + 9 * (theRB.velocity.magnitude/27.5f));
+        //print("second: " + (1 + (forwardAccel - 1) * (theRB.velocity.magnitude / 27.5f)));
+
     }
 
     public float zAngleLimit = 30f;
@@ -176,9 +191,12 @@ public class CarController : MonoBehaviour
 
         if (grounded)
         {
+            //theRB.drag = calculatedDrag;
             theRB.drag = drag;
             //theRB.AddForce(transform.forward * forwardGas * forwardAccel * 1000f);
-            if(speedInput > 0) theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
+            //if (speedInput > 0) theRB.AddForce(transform.forward * speedInput * (5 + (forwardAccel - 5) * (theRB.velocity.magnitude / 27.5f)) * 1000f);
+            //if (speedInput > 0) theRB.AddForce(transform.forward * speedInput * (1 + (forwardAccel - 1) * (theRB.velocity.magnitude / 27.5f)) * 1000f);
+            if (speedInput > 0) theRB.AddForce(transform.forward * speedInput * forwardAccel * 1000f);
             if(speedInput <= 0) theRB.AddForce(transform.forward * speedInput * reverseAccel * 1000f);
             theRB.AddForce(-Vector3.up * downforce);
         }
