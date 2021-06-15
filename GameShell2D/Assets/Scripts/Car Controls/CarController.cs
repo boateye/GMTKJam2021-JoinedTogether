@@ -34,6 +34,8 @@ public class CarController : MonoBehaviour
 
     private void Awake()
     {
+        Physics.IgnoreLayerCollision(9,11);
+
         controls = new InputController();
 
         controls.Gameplay.AButton.started += ctx => WhyS();

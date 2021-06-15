@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1771982305101655582}
   - component: {fileID: 1236716682842964779}
   - component: {fileID: 3235645912403790644}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 6720781400413627829}
   - component: {fileID: 8950470036522292000}
   - component: {fileID: 8143916282543137306}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 1651136099561311086}
   - component: {fileID: 8190387277778564499}
   - component: {fileID: 5874076328487760166}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 5956247865019132619}
   - component: {fileID: 9074236532770434482}
   - component: {fileID: 8231891050685482998}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 7528648842410517911}
   - component: {fileID: 179623592490938843}
   - component: {fileID: 1484076615944701042}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 7317228244714628149}
   - component: {fileID: 3975251933079309703}
   - component: {fileID: 6162937466243177238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 3584979279778582869}
   - component: {fileID: 3776104024125985841}
   - component: {fileID: 2223190330504033538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 9194937900868201105}
   - component: {fileID: 5743176235146719341}
   - component: {fileID: 5270477637389006314}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850915800429323243}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokenstreetlamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 7938582100241405965}
   - component: {fileID: 1331428982553715640}
   - component: {fileID: 3462981349634750102}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1076,7 @@ GameObject:
   - component: {fileID: 3159635347360616772}
   - component: {fileID: 4900050711783720752}
   - component: {fileID: 4356133983466994847}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 5111984774627929662}
   - component: {fileID: 6561143132247551952}
   - component: {fileID: 5875879577371193721}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1298,7 +1298,7 @@ GameObject:
   - component: {fileID: 3263978315670098799}
   - component: {fileID: 5390730811638795068}
   - component: {fileID: 4925503680545487285}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1409,7 @@ GameObject:
   - component: {fileID: 2302732457417877243}
   - component: {fileID: 5359370910028068402}
   - component: {fileID: 8761300379273549645}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 8964220753516954098}
   - component: {fileID: 4463584114819062555}
   - component: {fileID: 9175878947816048291}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 6540445175088220480}
   - component: {fileID: 5029256635537331630}
   - component: {fileID: 5117325109516431745}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1742,7 @@ GameObject:
   - component: {fileID: 5772608445592402632}
   - component: {fileID: 7662608540079882463}
   - component: {fileID: 6842681126059553400}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1853,7 +1853,7 @@ GameObject:
   - component: {fileID: 3656119918100518551}
   - component: {fileID: 8400426964983554151}
   - component: {fileID: 2768049313343235514}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1964,7 +1964,7 @@ GameObject:
   - component: {fileID: 8869920954977830073}
   - component: {fileID: 8465271592264775697}
   - component: {fileID: 2004146304518880748}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2075,7 @@ GameObject:
   - component: {fileID: 1376698658247179477}
   - component: {fileID: 4631039501358385743}
   - component: {fileID: 204144906911403926}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2186,7 +2186,7 @@ GameObject:
   - component: {fileID: 1385640825648129895}
   - component: {fileID: 1336712783439560708}
   - component: {fileID: 8837041531217284893}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2297,7 +2297,7 @@ GameObject:
   - component: {fileID: 831641884103126466}
   - component: {fileID: 5604744803553752069}
   - component: {fileID: 6221863213758704405}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2408,7 +2408,7 @@ GameObject:
   - component: {fileID: 3275037609969620247}
   - component: {fileID: 3379279145554234503}
   - component: {fileID: 1273522782035789053}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2519,7 +2519,7 @@ GameObject:
   - component: {fileID: 2584197724176996106}
   - component: {fileID: 8149361749454908673}
   - component: {fileID: 7117077379195720360}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2630,7 +2630,7 @@ GameObject:
   - component: {fileID: 4568535411104304502}
   - component: {fileID: 6764874529509971321}
   - component: {fileID: 8056387605193363247}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2741,7 +2741,7 @@ GameObject:
   - component: {fileID: 8519237899437204708}
   - component: {fileID: 5678733068930756548}
   - component: {fileID: 7339172483954472417}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2852,7 +2852,7 @@ GameObject:
   - component: {fileID: 5121137382830203634}
   - component: {fileID: 1309186687369611231}
   - component: {fileID: 8829643787535688756}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2963,7 +2963,7 @@ GameObject:
   - component: {fileID: 4804739341020989280}
   - component: {fileID: 4162018562507210732}
   - component: {fileID: 5329476547355917225}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3074,7 +3074,7 @@ GameObject:
   - component: {fileID: 4265710082202373103}
   - component: {fileID: 8097746944428592847}
   - component: {fileID: 6590901702870134846}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,7 +3185,7 @@ GameObject:
   - component: {fileID: 9016164668712609926}
   - component: {fileID: 3566237302963491289}
   - component: {fileID: 7987895767834463495}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3296,7 +3296,7 @@ GameObject:
   - component: {fileID: 8504244181945529360}
   - component: {fileID: 2029507143623519236}
   - component: {fileID: 8854508823069821327}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3407,7 +3407,7 @@ GameObject:
   - component: {fileID: 7667325670795500246}
   - component: {fileID: 1372446858033773162}
   - component: {fileID: 5195437939253639305}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3518,7 +3518,7 @@ GameObject:
   - component: {fileID: 2102051414986567545}
   - component: {fileID: 1051607386574863224}
   - component: {fileID: 6743873261530120675}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3629,7 +3629,7 @@ GameObject:
   - component: {fileID: 8032805270090045627}
   - component: {fileID: 8432251197181064596}
   - component: {fileID: 1769606568263798580}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3740,7 +3740,7 @@ GameObject:
   - component: {fileID: 9097109040746109200}
   - component: {fileID: 5431867109911462789}
   - component: {fileID: 2762708298378344099}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: streetlamp_cell.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}

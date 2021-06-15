@@ -7559,6 +7559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: vault
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13974972bd9eeef4997ee49219ca1586,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13974972bd9eeef4997ee49219ca1586, type: 3}
 --- !u!1001 &1417685862
@@ -11778,7 +11783,7 @@ GameObject:
   - component: {fileID: 2935244341273739477}
   - component: {fileID: 2935244341273739473}
   - component: {fileID: 2935244341273739486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: car (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

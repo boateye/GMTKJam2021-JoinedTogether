@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5787484345425102085}
   - component: {fileID: 5787484345425102084}
   - component: {fileID: 5787484345425102086}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 5787484346277896954}
   - component: {fileID: 5787484346277896953}
   - component: {fileID: 5787484346277896955}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 5787484344517029129}
   - component: {fileID: 5787484344517029128}
   - component: {fileID: 5787484344517029130}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 5787484346117494496}
   - component: {fileID: 5787484346117494495}
   - component: {fileID: 5787484346117494497}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 5787484345906081495}
   - component: {fileID: 5787484345906081494}
   - component: {fileID: 5787484345906081496}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 5787484344295665031}
   - component: {fileID: 5787484344295665030}
   - component: {fileID: 5787484344295665032}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6330934232591010672}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokenbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 5787484345227153661}
   - component: {fileID: 5787484345227153660}
   - component: {fileID: 5787484345227153662}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 5787484345547201405}
   - component: {fileID: 5787484345547201404}
   - component: {fileID: 5787484345547201406}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokencrate_cell.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 69130916694302644}
   - component: {fileID: 8567110441945923554}
   - component: {fileID: 4976194889543836503}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8633159668413290086}
   - component: {fileID: 8469295080525678176}
   - component: {fileID: 3983024135297936563}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 1178596804117699465}
   - component: {fileID: 3590008149508893705}
   - component: {fileID: 8704539651673110296}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 2392173088236174766}
   - component: {fileID: 7870786542124706491}
   - component: {fileID: 1333892118518454618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 5619826164204694701}
   - component: {fileID: 4684557663352669554}
   - component: {fileID: 5743010677876675122}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 2073567676245034656}
   - component: {fileID: 5332738918598833252}
   - component: {fileID: 2338158174330946960}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 7963703463217386852}
   - component: {fileID: 1717319350884005464}
   - component: {fileID: 7251879595652984934}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 9032627287965719664}
   - component: {fileID: 4344742787407004875}
   - component: {fileID: 3939595303786444808}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   - component: {fileID: 966587769174924154}
   - component: {fileID: 5456718214233586265}
   - component: {fileID: 8538509323734079720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 6300552658195419756}
   - component: {fileID: 3054969894936072393}
   - component: {fileID: 8851049198735059315}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 9009946687080267717}
   - component: {fileID: 9158336289303025676}
   - component: {fileID: 7983411599795321878}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7621643750766992705}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: brokenbarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1279,7 +1279,7 @@ GameObject:
   - component: {fileID: 2201442583828803459}
   - component: {fileID: 6889204965811034610}
   - component: {fileID: 4764450345385482730}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1390,7 +1390,7 @@ GameObject:
   - component: {fileID: 2132160859894378747}
   - component: {fileID: 8244818726080700952}
   - component: {fileID: 1787897601464315532}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1501,7 +1501,7 @@ GameObject:
   - component: {fileID: 653026549509878275}
   - component: {fileID: 2613426498747394816}
   - component: {fileID: 934298090889913844}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 8987875569482178027}
   - component: {fileID: 7790579681288029983}
   - component: {fileID: 4375403904334139859}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barrel_cell.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
