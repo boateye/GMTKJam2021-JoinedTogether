@@ -12,10 +12,12 @@ public class CarController : MonoBehaviour
     private float leftTrigger;
 
     public Rigidbody theRB;
+    public AudioSource carAudio;
 
     public float forwardAccel = 8f, reverseAccel = 4f, maxSpeed = 50f, turnStrength = 180f, groundRayLength = 0.5f;
     public float downforce = 100f, gravityForce = 10f;
     public float drag = 3f,releaseDrag = 0f;
+    public float enginePitch;
     private float calculatedDrag, forward;
 
     //private float speedInput, turnInput;
@@ -90,6 +92,17 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        carAudio.pitch = enginePitch;
+        
+        if (speedInput >= 0)
+        {
+            enginePitch = Mathf.Clamp(speedInput*2, 0.9f, 1.5f);
+        }
+        else if (speedInput < 0)
+        {
+            enginePitch = Mathf.Clamp(speedInput * -2, 0.9f, 1.1f);
+        }
+
         theRB.centerOfMass = com;
 
         transform.position = theRB.transform.position;
@@ -99,8 +112,6 @@ public class CarController : MonoBehaviour
 
         velocity = theRB.velocity;
         localVelocity = transform.InverseTransformDirection(velocity);
-
-
 
         /*
         speedInput = 0f;
@@ -115,6 +126,7 @@ public class CarController : MonoBehaviour
         transform.position = theRB.transform.position;
         */
 
+        
         speedInput = forwardGas - brake;
         if(grounded && theRB.velocity.magnitude > 1f)
         {
